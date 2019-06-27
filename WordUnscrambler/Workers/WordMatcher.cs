@@ -36,17 +36,18 @@ namespace WordUnscrambler.Workers
                     }
                 }
             }
-            return matchedWords;
-        }
 
-        private MatchedWord BuildMatchedWord(string scrambledWord, string word)
-        {
-            MatchedWord matchedWord = new MatchedWord
+            MatchedWord BuildMatchedWord(string scrambledWord, string word)
             {
-                ScrambledWord = scrambledWord,
-                Word = word
-            };
-            return matchedWord;
+                MatchedWord matchedWord = new MatchedWord
+                {
+                    ScrambledWord = scrambledWord,
+                    Word = word
+                };
+                return matchedWord;
+            }
+
+            return matchedWords;
         }
     }
 }
